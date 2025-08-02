@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="taskapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List with Checkbox</title>
+    <link rel="stylesheet" href="style17.css">
+</head>
+<body ng-controller="taskcontroller">
+    <div class="container">
+        <h2>My Task List</h2>
+        <ul>
+            <li ng-repeat="task in tasks">
+                <label>
+                    <input type="checkbox" ng-model="task.completed">
+                    <span ng-class="{'completed': task.completed}">{{ task.name }}</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app17.js"></script>
+</body>
+</html>
